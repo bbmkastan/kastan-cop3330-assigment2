@@ -18,26 +18,25 @@ public class App {
         String word2 = myApp.getUserInput("Enter the Second string: ");
 
         if (myApp.isSameAmountLetters(word1, word2)){
-            String adverb = myApp.getAdverbBasedOnWetherIsAnagram(word1, word2);
+            AnagramDetector ad = new AnagramDetector();
+            String adverb = myApp.getAdverb(ad.isAnagram(word1, word2));
             String outputString = myApp.generateOutputString(word1, word2, adverb);
             myApp.printOutput(outputString);
         } else {
-            myApp.printStringLengthNotEqualOutput(word1, word2);
+            myApp.printLengthNotEqualOutput(word1, word2);
         }
     }
 
-    public void printStringLengthNotEqualOutput(String word1, String word2) {
+    public void printLengthNotEqualOutput(String word1, String word2) {
         System.out.println("String does not have same amount of letters, therefore" +
                 " \"" + word1 + "\" and \"" + word2 + "\" are not anagrams.");
     }
 
-    public String getAdverbBasedOnWetherIsAnagram( String word1, String word2) {
-        AnagramDetector ad = new AnagramDetector();
-        String adverb = " not";
-        if (ad.isAnagram(word1, word2)) {
-                adverb = "";
+    public String getAdverb(boolean bool) {
+        if (bool) {
+            return "";
         }
-        return adverb;
+        return " not";
     }
 
     public void printOutput(String outputString) {

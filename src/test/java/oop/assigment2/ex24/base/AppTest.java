@@ -14,7 +14,7 @@ class AppTest {
     public void check_if_returns_correct_adverb_if_anagram() {
         App myApp = new App();
         String expectedAdverb = "";
-        String ActualAdverb = myApp.getAdverbBasedOnWetherIsAnagram("note", "tone");
+        String ActualAdverb = myApp.getAdverb(true);
 
         assertEquals(expectedAdverb, ActualAdverb);
     }
@@ -23,7 +23,7 @@ class AppTest {
     public void check_if_returns_correct_adverb_if_nonAnagram() {
         App myApp = new App();
         String expectedAdverb = " not";
-        String ActualAdverb = myApp.getAdverbBasedOnWetherIsAnagram("not", "tone");
+        String ActualAdverb = myApp.getAdverb(false);
 
         assertEquals(expectedAdverb, ActualAdverb);
     }
