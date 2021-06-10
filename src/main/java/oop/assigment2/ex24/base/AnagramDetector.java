@@ -13,14 +13,14 @@ public class AnagramDetector {
     }
 
     public boolean isStringSameLetters(String word1, String word2) {
-        char[] a1 = convertStringtoLowerCaseArrayWithoutSpaces(word1);
+        char[] a1 = getLowerCaseArrayWithoutSpaces(word1);
         Arrays.sort(a1);
-        char[] a2 = convertStringtoLowerCaseArrayWithoutSpaces(word2);
+        char[] a2 = getLowerCaseArrayWithoutSpaces(word2);
         Arrays.sort(a2);
         return Arrays.equals(a1, a2);
     }
 
-    private char[] convertStringtoLowerCaseArrayWithoutSpaces(String word) {
+    private char[] getLowerCaseArrayWithoutSpaces(String word) {
         String s = word.toLowerCase();
         return s.replaceAll(" ", "").toCharArray();
     }
