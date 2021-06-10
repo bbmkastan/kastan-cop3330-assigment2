@@ -14,8 +14,8 @@ public class App {
         App myApp = new App();
 
         System.out.println("Enter two strings and I'll tell you if they are anagrams:");
-        String word1 = getUserInput("Enter the First string: ");
-        String word2 = getUserInput("Enter the Second string: ");
+        String word1 = myApp.getUserInput("Enter the First string: ");
+        String word2 = myApp.getUserInput("Enter the Second string: ");
 
         if (myApp.isSameAmountLetters(word1, word2)){
             String adverb = myApp.getAdverbBasedOnWetherIsAnagram(word1, word2);
@@ -48,7 +48,7 @@ public class App {
         return "\"" + word1 + "\" and \"" + word2 + "\" are" + adverb + " anagrams.";
     }
 
-    public static String getUserInput(String prompt) {
+    public String getUserInput(String prompt) {
         System.out.print(prompt);
         return in.nextLine();
     }
