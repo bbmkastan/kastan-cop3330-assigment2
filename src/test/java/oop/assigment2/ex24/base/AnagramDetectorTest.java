@@ -37,6 +37,6 @@ class AnagramDetectorTest {
     @Test
     public void isAnagram_return_true_for_different_caseSize_anagram() {
         AnagramDetector ad = new AnagramDetector();
-        assertTrue(ad.isAnagram("CarRace", "racecar"));
+        assertTrue(ad.isAnagram("CarRace", "rAcEcar"));
     }
 }

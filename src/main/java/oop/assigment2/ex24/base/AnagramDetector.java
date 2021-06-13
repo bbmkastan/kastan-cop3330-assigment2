@@ -9,10 +9,6 @@ import  java.util.Arrays;
 
 public class AnagramDetector {
     public boolean isAnagram(String word1, String word2) {
-            return isStringSameLetters(word1, word2);
-    }
-
-    public boolean isStringSameLetters(String word1, String word2) {
         char[] a1 = getLowerCaseArrayWithoutSpaces(word1);
         Arrays.sort(a1);
         char[] a2 = getLowerCaseArrayWithoutSpaces(word2);
