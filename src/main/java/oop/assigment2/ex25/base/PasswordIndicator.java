@@ -1,5 +1,9 @@
 package oop.assigment2.ex25.base;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Bao Kastan
+ */
 
 public class PasswordIndicator {
 
@@ -15,13 +19,12 @@ public class PasswordIndicator {
     public String evaluateStrength(int strength) {
         if (strength >= 7) {return "very strong password";}
         if (strength >= 5) {return "strong password";}
-        if (strength >= 3) {return "weak password";}
+        if (strength >= 2) {return "weak password";}
         if (strength >= 1) {return "very weak password";}
         return "invalid password";
     }
 
     public int getPasswordStrength(String password) {
-        int points = 0;
         characterCounuter(password);
         return countPoints(password);
     }
