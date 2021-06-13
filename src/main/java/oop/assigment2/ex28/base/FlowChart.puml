@@ -1,0 +1,9 @@
+@startuml
+start
+while (i <= 5)
+:UserInput;
+:sum+=UserInput;
+:i++;
+endwhile
+:output;
+@enduml
